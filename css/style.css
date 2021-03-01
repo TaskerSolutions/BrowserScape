@@ -1,0 +1,344 @@
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	margin: 0px;
+	padding: 0px;/* so all browsers display same */
+	box-sizing: inherit;
+} 
+body {
+	background-color: #000000; /* Used if the image is unavailable */
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	font-family: Gloria Hallelujah;
+	color: white;
+	text-align: center;
+}
+
+.bgimg {
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-image: url("../media/mlbg.png");
+	background-repeat: repeat;
+	opacity: 0.5;
+}
+	
+.topnav {
+	z-index: 1;
+	position: fixed;
+	background-color: #333333;
+	width: 100%; 
+	overflow: hidden;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none; /* Hide the link that should open and close the topnav on small screens */
+}
+ 
+@media screen and (max-width: 600px) { /* When the screen is less than 600 pixels wide, hide all links, except for the first one.*/
+  .topnav a:not(:last-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  .topnav.responsive {position: fixed;}
+  .topnav.responsive a.icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.game {
+	position: relative;
+	font-family: arail;
+	font-size: 20px;
+	top: 85px;
+	max-width: 95wv;
+	margin: 0px 40px;
+	display: block;
+}
+
+.stats {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #242424;
+	min-height: 30px;
+}
+
+.container {
+	position:relative;
+	border-top: solid;
+	border-width: 1px;
+	border-color: #242424;
+	min-height: 250px;
+	max-height: 500px;
+}
+
+#text > p {
+  display: none;
+  margin: 15px auto;
+}
+
+#text > p:nth-child(1),
+#text > p:nth-child(2),
+#text > p:nth-child(3),
+#text > p:nth-child(4),
+#text > p:nth-child(5),
+#text > p:nth-child(6),
+#text > p:nth-child(7),
+#text > p:nth-child(8) {
+  display: inherit;
+}
+
+.container img {
+	margin: 15px auto;
+	width:200px; 
+	height:200px; 
+	display: none;
+}
+
+.container button {
+	display: block;
+	margin: 15px auto;
+	width: 70%;
+	background-color: transparent;
+	color: white;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	display: none;
+	height: 50px;
+}
+
+.gear {
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	background-image: ;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.progress {
+	position:absolute;
+	z-index: -1;
+	width: 1%;
+	height: 50px;
+	background-color: #333333;
+	transform: translateY(-18px);
+}
+
+#background {
+	position: relative;
+	z-index: 2;
+}
+
+#c {
+	position: fixed;
+	left: 0;
+	z-index: -1;
+}
+
+.title-block {
+	color: #FFFFFF;
+	margin: auto;
+	padding-top: 20vh;
+	padding-bottom: 100px;
+	
+}
+
+.title-background {
+	background-color: #000000;
+	margin: auto;
+	width: 80%;
+	border-radius: 500px;
+	transition: all 0.5s ease-in-out;
+	margin-bottom: 50px;
+}
+
+.title-background:hover {
+	background-color: #001602;
+}
+
+.title-background h1 {
+	padding: 30px 0px;
+	font-size: 10vw;
+}
+
+.title-background h2 {
+	padding-bottom: 30px;
+	font-size: 4vw;
+}
+
+.footer {
+	z-index: -1;
+	position: fixed;
+	padding:20px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	background-color: #333333;
+	width: 100%;
+	font-size: 15px;
+	font-family: arail;
+}
+
+.row::after {/*following is creating breakpoint for displaying on desktop*/
+  content: "";
+  clear: both;
+  display: table;
+  padding: 0px 50px;
+}
+
+[class*="col-"] { /* For mobile phones: */
+  width: 90%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 600px) { /* For desktop: */
+	.col-2 {
+		width: 50%;
+		float: left;
+	}
+    .col-3 {
+		width: 33.33%;
+		float: left;
+		
+	}
+	 .col-5 {
+		width: 19.6%;
+		float: left;
+		margin: 1px;
+	}
+	 .col-10 {
+		width: 10%;
+		float: left;
+	}
+} /*above is creating breakpoint for displaying on desktop*/
+
+.btn {
+	display: block;
+	margin: 0px auto;
+	background-color: #01c050;
+	background-color: #000000;
+	border-radius: 30px;
+	padding: 18px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.btn:hover {
+	background-color: #028A0B;
+}
+
+.col-3 a {
+	min-width: 200px;
+	max-width: 300px;
+}
+
+.ready {
+  opacity:0;
+  transform: translateY(50px);
+}
+
+.active {
+  opacity:1;
+  transform: translateY(0px);
+}
+
+.reveal-in {
+  -webkit-transition: all 600ms ease-in-out;
+  -moz-transition: all 600ms ease-in-out;
+  -ms-transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

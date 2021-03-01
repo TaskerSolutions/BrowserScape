@@ -1,0 +1,394 @@
+html {
+	height: 100%;
+	overflow:hidden;
+}
+*, *:before, *:after {
+	margin: 0px;
+	padding: 0px;/* so all browsers display same */
+	box-sizing: border-box;
+	 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+} 
+body {
+	background-color: #000000; /* Used if the image is unavailable */
+	height: 100%;
+	overflow: hidden;
+	font-family: Gloria Hallelujah;
+	color: white;
+	text-align: center;
+	font-size: 17px;
+	position:relative;
+
+}
+#background {
+	z-index: 1;
+	position:relative;
+	border-top: solid;
+	border-width: 1px;
+	border-color: #242424;
+	margin: auto;
+	display: block;
+	background: #000000;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#gamewindow {
+	z-index: 1;
+	position:relative;
+	border: solid;
+	border-width: 0px;
+	border-color: #333333;
+	top: 30px;
+	margin: auto;
+	display: block;
+	background: #000000BF;
+	height: 700px;
+	width: 1000px;
+	overflow: hidden;
+	border: 2px solid #333333;
+}
+
+#gameplay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	color: white;
+}
+
+
+
+
+.reveal {
+	animation: fade-in 1s;
+}
+@keyframes fade-in {
+  from {
+	opacity: 0;
+  }
+  to {
+    opacity: 1;
+	-moz-animation: linear;
+	-webkit-animation: linear;
+	animation: linear;
+  }
+}
+
+
+#text {
+	height: 200px;
+	top: 500px;
+	left: 0px;
+	width: 1000px;
+	position:absolute;
+	background: #000000BF;
+	overflow-y: scroll;
+	font-family: arail;
+	font-size: 20px;
+	border-top: 2px solid #333333;
+}
+
+#text::-webkit-scrollbar {
+    width: 1em;
+}
+#text::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #333333;
+}
+#text::-webkit-scrollbar-thumb {
+  background-color: #33333360;
+  outline: 1px solid slategrey;
+}
+
+#text > p {
+	position:relative;
+	z-index: 1;
+	/*display:none;*/
+	margin: 10px auto;
+	padding: 0px 10px;
+}
+
+
+
+
+#stats {
+	top: 578px;
+	width: 100%;
+	position: absolute;
+	margin: auto;
+	background: #00000090;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 2px solid #333333;
+}
+#buttons {	
+	overflow: auto;
+	width: 375px;
+	margin: 49px auto;
+	position: absolute;
+	z-index: 2;
+	padding: 10px 10px 20px 10px;
+	max-height: 510px;
+}
+
+#menubtncontainer {
+	top: 425px;
+	height: 155px;
+	width: 274px;
+	position: absolute;
+	overflow:auto;
+	background-color: #000000;
+}
+.menubtns {
+	display: none;
+	background-color: #00000080;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #242424;
+	height: 40px;
+	width: 46%;
+	line-height: 34px;
+	cursor: pointer;
+	position: relative;
+	font-size: 0.8em;
+	float: left;
+	margin: 5px;
+}
+
+tbody {
+	position:relative;
+	margin: 10px;
+	float: left;
+	display: inline-block;
+	background-color: #00000080;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #242424;
+}
+
+.items {
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #242424;
+	height: 90px;
+	width: 120px;
+	font-size: 13px;
+	display: inline-block;
+	position: relative;
+}
+.stats {
+	margin: auto;
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #242424;
+	height: 70px;
+	width: 91px;
+	font-size: 13px;
+	display: inline-block;
+	position: relative;
+}
+.stats p {
+	font-size: 1.5em;
+}
+.gear {
+	margin: 5px;
+	height: 70px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+.pointer {
+	cursor: pointer;
+}
+
+.header {
+	/*display:none;*/
+	background-color: #00000080;
+	border-style: solid;
+	border-width: 4px;
+	border-color: #242424;
+	height: 40px;
+	width: ;
+	line-height: 34px;
+	cursor: pointer;
+	position:relative;
+
+}
+
+.menu {
+	background-color: #000000E6;
+	display: block;
+	overflow: auto;
+	width: 375px;
+	margin: 30px;
+	position: absolute;
+	z-index: 4;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #242424;
+	padding: 10px 10px 20px 10px;
+	max-height: 370px;
+}
+.menu::-webkit-scrollbar {
+    width: 1em;
+}
+.menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #333333;
+}
+.menu::-webkit-scrollbar-thumb {
+  background-color: #00000060;
+  outline: 1px solid slategrey;
+}
+.menu p {
+	font-size: 0.7em;
+}
+.menuoptions {
+	background-color: #00000099;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #242424;
+	height: 60px;
+	min-width: 190px;	
+	font-size: 16px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	z-index: 6;
+}
+
+.quest {
+	font-size: 0.8em;
+	background-color: #333333;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #242424;
+	padding: 10px;
+	margin: 10px;
+	cursor: pointer;
+	display: none;
+}
+.qnumber {
+	float: left;
+}
+.qreward {
+	float:right;
+}
+
+progress {
+	position: absolute;
+	background-color: green;
+	text-align: center;
+}
+
+img {
+	position: absolute;
+	cursor: pointer;
+	user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.action {
+	position: absolute;
+	cursor: pointer;
+}
+
+.zoomin {
+	width: 8px;
+	height: auto;
+	transform-origin: right top;
+	animation: scale 4000ms ease-in forwards;
+}
+@keyframes scale {
+	to {
+		transform: scale(22);
+	}
+}
+
+.rotate {
+	-webkit-transform: rotate(180deg);
+	-webkit-transition: -webkit-transform 1s;
+}
+
+#fire {
+	opacity: 0.3;
+	margin: auto;
+	position: absolute;
+	bottom: 100px;
+	left: 10px;
+}
+
+
+
+.xpDrop {
+	font-family: arail;
+	z-index: 50;
+	color: white;
+	animation: transform 4000ms linear;
+	position: absolute;
+}
+@keyframes transform {
+	to {
+		transform: translate(0px,-500px);
+	}
+}
+
+
+
+.btnwrapper {
+	position:relative;
+	
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height: 50px;
+	display: none;
+}
+.button {
+	z-index: 1;
+	position:absolute;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFFFFF90;
+	width:100%;
+	line-height: 46px;
+	font-size: 0.8em;
+	margin:auto;
+	background-color: #00000080;
+	color: white;
+	cursor: pointer;
+}
+.progress {
+	display: block;
+	position:absolute;
+	width: 0.1%;
+	height: 50px;
+	background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

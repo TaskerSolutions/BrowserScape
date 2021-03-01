@@ -1,0 +1,142 @@
+.reveal {
+	animation: slide-down 1s;
+}
+@keyframes slide-down {
+  from {
+	-moz-transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+	opacity: 0;
+  }
+  to {
+    opacity: 1;
+	-moz-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+	transform: translateY(0px);
+	-moz-animation: linear;
+	-webkit-animation: linear;
+	animation: linear;
+  }
+}
+
+
+#text {
+	height: 155px;
+	top: 425px;
+	left: 272px;
+	width: 728px;
+	position:absolute;
+	background: #000000BF;
+	overflow: auto;
+	font-family: arail;
+	border: 2px solid #333333;
+}
+
+#text::-webkit-scrollbar {
+    width: 1em;
+}
+#text::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #333333;
+}
+#text::-webkit-scrollbar-thumb {
+  background-color: #33333360;
+  outline: 1px solid slategrey;
+}
+
+#text > p {
+	position:relative;
+	z-index: 1;
+	/*display:none;*/
+	margin: 10px auto;
+	padding: 0px 10px;
+}
+/*
+#text > p:nth-child(1) {
+	display: inherit;
+}
+#text > p:nth-child(2) {
+	display: inherit;
+	font-size: 0.95em;
+	opacity: 0.95;
+}
+#text > p:nth-child(3) {
+	display: inherit;
+	font-size: 0.9em;
+	opacity: 0.9;
+}
+#text > p:nth-child(4) {
+	display: inherit;
+	font-size: 0.85em;
+	opacity: 0.85;
+}
+#text > p:nth-child(5) {
+	display: inherit;
+	font-size: 0.8em;
+	opacity: 0.8;
+}
+#text > p:nth-child(6) {
+	display: inherit;
+	font-size: 0.75em;
+	opacity: 0.75;
+}
+#text > p:nth-child(7) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.7;
+}
+#text > p:nth-child(8) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.6;
+}
+#text > p:nth-child(9) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.5;
+}
+#text > p:nth-child(10) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.4;
+}
+#text > p:nth-child(11) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.3;
+}
+#text > p:nth-child(12) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.3;
+}
+#text > p:nth-child(13) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.2;
+}
+#text > p:nth-child(14) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.2;
+}
+#text > p:nth-child(15) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.2;
+}
+#text > p:nth-child(16) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.1;
+}
+#text > p:nth-child(17) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.1;
+}
+#text > p:nth-child(18) {
+	display: inherit;
+	font-size: 0.7em;
+	opacity: 0.1;
+}*/
+
