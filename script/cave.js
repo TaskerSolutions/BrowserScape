@@ -180,27 +180,27 @@ function stokeFire() {
 				notBusy = false;
 				addText("You carefully position some wood and start blowing softly.");
 				editWood(-1);
+				fireStrength ++;
 				setTimeout(function(){
 					addText("The fire roars back to life!  Fire strength: " + fireStrength + "/5")
 					health = healthLevel;
-					fireStrength ++;
 					notBusy = true;
 				}, 3000);
 			} else if (fireStrength < 4) {
 				notBusy = false;
+				fireStrength ++;
 				addText("You add some wood to the fire.");
 				editWood(-1);
 				setTimeout(function(){
-					fireStrength ++;
 					addText("The fire roars and the cave gets brighter. Fire strength: " + fireStrength + "/5");
 					notBusy = true;
-				}, 2000)
-			} else if(fireStrength == 4) {
+				}, 1000)
+			} else if (fireStrength == 4) {
 				notBusy = false;
 				addText("You add some wood to the fire.");
 				editWood(-1);
+				fireStrength ++;
 				setTimeout(function(){	
-					fireStrength ++;
 					addText("The fire lights up the room! Fire strength: " + fireStrength + "/5");
 					oldHatchetVisible = true;
 					addText("You notice an old hatchet in the back of the cave.");				
@@ -209,7 +209,7 @@ function stokeFire() {
 					setTimeout(function() {toolsBtnFlashing = false}, 3000)
 					notBusy = true;
 				}, 2000);
-			} else if (fireStrength >= 5 && fireStrength < 100) {
+			} else if (fireStrength >= 5 && fireStrength < 100 && notBusy) {
 				if (stoking) {
 					stopAll();
 				} else {
@@ -235,7 +235,7 @@ function stokeFire() {
 						}
 					}, 1000);
 				}
-			} else {
+			} else if (fireStrength >= 100) {
 				smeltingMenu()
 			}
 		} else {
